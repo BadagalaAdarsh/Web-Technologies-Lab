@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Appointment</title>
+    <script type="text/javascript" src="reg.js"></script>
+
+  </head>
+  <body>
+
+    <form name="appointment_form" autocomplete="on" method="post" action="welcome.html" target="_blank"  onsubmit="return appointment_validate()">
+        <fieldset>
+            <legend>Appointment Form</legend>
+
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="Name" id="name" name="name" required><br>
+
+            <label for="guardianname">Guardian name</label><br>
+            <input type="text" placeholder="Guardian name" id="guardianname" name="guardianname" required><br>
+
+            <label for="phnumber">Contact No</label><br>
+            <input type="number" id="phnumber" placeholder="Phone number" name="phnumber" required><br>
+
+            <label for="service">Type of Service</label><br>
+            <select name="service" id="service" required>
+              <option value="" hidden>Select Service</option>
+              <option value="1">Adult medicine</option>
+              <option value="2">Behavioral Health</option>
+              <option value="3">Dental care</option>
+              <option value="4">Pediatric medicine</option>
+              <option value="1">Pharmacy services</option>
+              <option value="1">Podiatry specialists</option>
+              <option value="1">OB/GYN</option>
+            </select><br>
+
+            <label for="age">Age</label><br>
+            <input type="number" id="age" placeholder="Age" name="age" required><br>
+
+            <label for="location">Location</label><br>
+            <input type="text" id="location" placeholder="Location" name="location" required><br>
+
+            <input type="submit" value="Submit" name="submit" id="submit">
+        </fieldset>
+    </form>
+
+  </body>
+</html>

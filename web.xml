@@ -1,0 +1,16 @@
+<web-app>
+  <servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>Cook</servlet-class>
+
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>password</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/hservlet</url-pattern>
+  </servlet-mapping>
+</web-app>

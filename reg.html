@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
+    <script type="text/javascript" src="reg.js"></script>
 </head>
-<body>
-    <form  name="form" autocomplete="on" method="post" action="" onsubmit="return validateForm()" target="_self">
+<body style="background-color:#FAEBD7;">
+    <form autocomplete="on" name="form" method="post" action="registration.php" target="_blank" style="margin-left:15%;margin-right:15%" onsubmit="return validate()">
         <fieldset>
             <legend><h2>Registation Form</h2></legend>
 
-	<table style="width:100%">	
+	<table style="width:100%">
 	<tr>
             <td><label for="firstname">First name</label><br></td>
-            <td><input type="text" placeholder="First name" id="firstname" name="fname" required=""><br></td>
+            <td><input type="text" placeholder="First name" id="firstname" name="firstname" required><br></td>
 	</tr>
 
 
 
 	<tr>
             <td><label for="lastname">Last name</label><br></td>
-            <td><input type="text" placeholder="Last name" id="lastname"  name="lname" required=""><br></td>
+            <td><input type="text" placeholder="Last name" id="lastname" name="lastname" required><br></td>
 	</tr>
 
 
 	<tr>
             <td><label for="age">Age</label><br></td>
-            <td><input type="number" placeholder="Age" id="age" name="age" required=""><br></td>
+            <td><input type="number" placeholder="Age" id="age" name="age" required><br></td>
 	</tr>
 
 
 	<tr>
             <td><label for="email">E-mail</label><br></td>
-            <td><input type="email" id="email" placeholder="E-mail Address" name="email" required=""><br></td>
+            <td><input type="email" id="email" name="email" placeholder="E-mail Address" required><br></td>
 	</tr>
 
 
@@ -48,81 +49,19 @@
 
 	<tr>
             <td><label for="phnumber">Contact No</label><br></td>
-            <td><input type="number" id="phnumber" placeholder="Phone number" required=""><br></td>
+            <td><input type="number" id="phnumber" name="phnumber" placeholder="Phone number" required><br></td>
 	</tr>
 
 	<tr>
-            <td colspan="2" align="center"><input type="submit" value="Submit" "></td>
+            <td colspan="2" align="center"><input type="submit" value="Submit" ></td>
+	</tr>
+
+	<tr>
+            	<td colspan="2" >Already a user? click to <a href="login.html">sign in</a></td>
 	</tr>
 	</table>
 
         </fieldset>
     </form>
 </body>
-<script>
-  const name = /^[a-zA-Z_\ ]+$/;
-const regage = /^[0-9]{1,2}$/;
-const regpassword = /^[A-Za-z0-9\[\]!@#$%^&*()_+\\":';<>?,./]{8,30}$/;
-const regphnumber = /^[0-9]{10}$/;
-
-
-
-function validateForm()
-{
-//   ---------------------reg.html--------------------------
-    if(!( name.test(form.firstname.value)))
-    {
-        alert("Please Enter Correct firstname");
-        // form.firstname.title="hahaha";
-        form.firstname.focus();
-        return false;
-    }
-    else if (!( name.test(form.lastname.value)))
-    {
-      alert("Please Enter Correct lastname");
-      form.lastname.focus();
-      return false;
-    }
-
-    else if (!( regage.test(form.age.value)))
-    {
-      alert("Please Enter Correct age");
-      form.age.focus();
-      return false;
-    }
-
-    else if (!( regpassword.test(form.password.value)))
-    {
-      alert("Please Enter Correct password");
-      form.password.focus();
-      return false;
-    }
-
-    else if (!(form.password.value == form.cpassword.value))
-    {
-      alert("Passwords are not matched");
-      form.cpassword.focus();
-      return false
-    }
-
-    else if (!(regphnumber.test(form.phnumber.value)))
-    {
-      alert("Please Enter Correct phone number");
-      form.phnumber.focus();
-      return false;
-    }
-
-    else if (!(name.test(form.specialization.value)))
-    {
-      alert("Please Enter Correct specialization");
-      form.specialization.focus();
-      return false;
-    }
-    else
-    {
-      return true;
-    }
-}
-
-</script>
 </html>

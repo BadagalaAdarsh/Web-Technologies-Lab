@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Departments</title>
+    <script type="text/javascript" src="reg.js"></script>
+    <style media="screen">
+
+      .container:nth-child(even)
+      {
+
+        position: absolute;
+        right: 10px;
+        margin-top: 0;
+      }
+
+      .container
+      {
+        position: relative;
+        height: 30vh;
+        width:40vw;
+        margin-top: 30vh;
+
+      }
+
+      .out-container
+      {
+        display: block;
+        background-color:cyan;
+        opacity:0.9;
+        width:40vw;
+        height: 30vh;
+        border-radius: 500px;
+      }
+
+      .in-container
+      {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        margin-top: 20px;
+      }
+
+      p
+      {
+        font-size: 25px;
+        font-family: tahoma;
+        color: #ff4500;
+        letter-spacing: 3px;
+        opacity: ;
+
+      }
+
+      img
+      {
+        padding: 3vh 0 0 0;
+        /* border: 1px solid black; */
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="department_form" action="depregistration.php" method="post" onsubmit="return department_validate()" style="margin-left:15%;margin-right:15%">
+      <fieldset>
+        <legend><h2>Department Registration</h2></legend>
+
+        <label for="id">Id</label><br>
+        <input type="number" name="id" placeholder="Id" id="id">
+        <br>
+        <label for="name">Department Name</label><br>
+        <input type="text" name="name" placeholder="Department Name" id="department_name">
+        <br>
+        <label for="block_name">Block Name</label><br>
+        <input type="text" name="block_name" placeholder="Block name" id="block_name">
+        <br><br>
+        <input type="submit" value="Submit" >
+      </fieldset>
+    </form>
+    <br>
+
+    <table border="2" style="border-collapse:collapse;" align="center">
+      <tr>
+        <th>Id</th>
+        <th>Department Name</th>
+        <th>Block name</th>
+      </tr>
+
+      <tr>
+        <td>1234</td>
+        <td>ENT</td>
+        <td>Aravali</td>
+      </tr>
+
+      <tr>
+        <td>2345</td>
+        <td>Surgery</td>
+        <td>Vindhya</td>
+      </tr>
+
+      <tr>
+        <td>3456</td>
+        <td>Skin</td>
+        <td>Himalya</td>
+      </tr>
+
+      <tr>
+        <td>4567</td>
+        <td>Emergency</td>
+        <td>Satpura</td>
+      </tr>
+    </table>
+
+    <br>
+    <div class="container">
+      <div class="out-container">
+            <img src="doctor.png" alt="doctor" height=80%>
+            <div class="in-container">
+                <p>Adarsh</p>
+                <p>MBBS</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="out-container">
+            <img src="doctor.png" alt="doctor" height=80%>
+            <div class="in-container">
+                <p>Adarsh</p>
+                <p>MBBS</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="out-container">
+            <img src="doctor.png" alt="doctor" height=80%>
+            <div class="in-container">
+                <p>Adarsh</p>
+                <p>MBBS</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="out-container">
+            <img src="doctor.png" alt="doctor" height=80%>
+            <div class="in-container">
+                <p>Adarsh</p>
+                <p>MBBS</p>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
+
+Name
+age
+place
+disesase
+weight
